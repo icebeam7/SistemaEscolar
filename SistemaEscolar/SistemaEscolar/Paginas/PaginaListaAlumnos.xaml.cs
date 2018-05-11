@@ -2,7 +2,6 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SistemaEscolar.Modelos;
-using SistemaEscolar.Servicios;
 
 namespace SistemaEscolar.Paginas
 {

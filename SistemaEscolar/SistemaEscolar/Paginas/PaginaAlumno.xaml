@@ -9,7 +9,7 @@
             <StackLayout Padding="15">
                 <Label Text="Nombre: " TextColor="Blue" FontSize="Large"/>
                 <Entry x:Name="txtNombre" TextColor="White" Text="{Binding Nombre}" 
-                       Placeholder="Ingresa el nombre de la escuela" 
+                       Placeholder="Ingresa el nombre del alumno" 
                        PlaceholderColor="LightGray" BackgroundColor="Black" FontSize="Medium"/>
             </StackLayout>
 

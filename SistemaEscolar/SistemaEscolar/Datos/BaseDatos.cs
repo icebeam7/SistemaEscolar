@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using Microsoft.EntityFrameworkCore;
 using SistemaEscolar.Modelos;
 
 namespace SistemaEscolar.Datos

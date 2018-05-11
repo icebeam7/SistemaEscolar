@@ -4,7 +4,7 @@
              x:Class="SistemaEscolar.Paginas.PaginaListaAlumnos">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-            <Label Text="{Binding Nombre}" TextColor="Black" FontSize="Large" Margin="15"/>
+            <Label Text="{Binding Nombre}" TextColor="Blue" FontSize="Large" Margin="15"/>
             <Label Text="Lista de Alumnos" TextColor="Black" FontSize="Medium" Margin="15"/>
 
             <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>

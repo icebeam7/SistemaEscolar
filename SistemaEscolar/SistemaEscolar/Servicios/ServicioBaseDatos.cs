@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using SistemaEscolar.Datos;
-using SistemaEscolar.Helpers;
 
 namespace SistemaEscolar.Servicios
 {
@@ -28,16 +27,9 @@ namespace SistemaEscolar.Servicios
 
         public virtual async Task<T> Agregar(T dato)
         {
-            try
-            {
-                await bd.Set<T>().AddAsync(dato);
-                await bd.SaveChangesAsync();
-                return dato;
-            }
-            catch(Exception ex)
-            {
-                return null;
-            }
+            await bd.Set<T>().AddAsync(dato);
+            await bd.SaveChangesAsync();
+            return dato;
         }
 
         public virtual async Task<T> Actualizar(T dato)
