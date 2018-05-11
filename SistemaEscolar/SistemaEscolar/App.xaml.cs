@@ -1,34 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
+using SistemaEscolar.Datos;
+using SistemaEscolar.Helpers;
 
 namespace SistemaEscolar
 {
 	public partial class App : Application
 	{
-		public App ()
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new SistemaEscolar.MainPage();
+            MainPage = new NavigationPage(new Paginas.PaginaListaEscuelas());
 		}
 
-		protected override void OnStart ()
-		{
-			// Handle when your app starts
-		}
+        static BaseDatos bd;
 
-		protected override void OnSleep ()
-		{
-			// Handle when your app sleeps
-		}
-
-		protected override void OnResume ()
-		{
-			// Handle when your app resumes
-		}
-	}
+        public static BaseDatos BD
+        {
+            get
+            {
+                if (bd == null)
+                {
+                    bd = new BaseDatos(Constantes.NombreBD);
+                }
+                return bd;
+            }
+        }
+    }
 }
