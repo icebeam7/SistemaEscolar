@@ -14,7 +14,7 @@ namespace SistemaEscolar.Droid.Datos
             return Path.Combine(
                 System.Environment.GetFolderPath(
                     System.Environment.SpecialFolder.Personal),
-                    Constantes.NombreBD);
+                Constantes.NombreBD);
         }
     }
 }

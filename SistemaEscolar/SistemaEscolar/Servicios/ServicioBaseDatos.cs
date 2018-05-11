@@ -41,17 +41,10 @@ namespace SistemaEscolar.Servicios
 
         public virtual async Task<bool> Eliminar(int id)
         {
-            try
-            {
-                var entity = await BuscarPorId(id);
-                bd.Set<T>().Remove(entity);
-                await bd.SaveChangesAsync();
-                return true;
-            }
-            catch(Exception ex)
-            {
-                return false;
-            }
+            var entity = await BuscarPorId(id);
+            bd.Set<T>().Remove(entity);
+            await bd.SaveChangesAsync();
+            return true;
         }
     }
 }
